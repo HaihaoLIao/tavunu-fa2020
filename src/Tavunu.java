@@ -10,5 +10,79 @@
  * @author Your Name
  */
 public class Tavunu {
-    /* See readme.md for what to do. */
+   private String name;
+   private int birthYear;
+   private int pava;
+  
+   public Tavunu() {
+       name="";
+       birthYear=Integer.MIN_VALUE;
+       pava=0;
+   }
+
+   public Tavunu(String name, int birthYear, int pava) {
+       super();
+       this.name = name;
+       this.birthYear = birthYear;
+       this.pava = pava;
+   }
+   
+   public void setBirthYear(int birthYear) {
+       this.birthYear=birthYear;
+   }
+
+   public int getPava() {
+       return pava;
+   } 
+   
+   public String getName() {
+       return name;
+   }
+   
+   public int getBirthYear() {
+       return birthYear;
+   }
+
+    public boolean spendPava(int amount){
+
+        if(amount <= 0){
+            return false;
+        }
+        else {
+            pava-=amount;
+            return true;
+        }
+        
+    }
+  
+   public boolean receivePava(int amount){
+
+        if(amount <= 0){
+            return false;
+        }
+        else{
+            pava+=amount;
+            return true;
+        }
+        
+    }
+   
+   public boolean setName(String name){
+        if(name.charAt(0) != 'T' && name.charAt(0) != 'D'){
+            return false;
+        }
+        this.name = name;
+        return true;
+    }
+   
+    public String toString(){
+        String stringRepresentation = name + " born in " + String.valueOf(birthYear) + " has " + String.valueOf(pava) + " pava.";
+
+        return stringRepresentation;
+    }
+  
+  
+  
+  
+  
 }
