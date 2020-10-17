@@ -19,7 +19,7 @@ public class Tavunu {
        birthYear=Integer.MIN_VALUE;
        pava=0;
    }
-
+   // Constructors
    public Tavunu(String name, int birthYear, int pava) {
        super();
        this.name = name;
@@ -42,7 +42,7 @@ public class Tavunu {
    public int getBirthYear() {
        return birthYear;
    }
-
+    // Spend Pava if amount is positive.
     public boolean spendPava(int amount){
 
         if(amount <= 0){
@@ -54,7 +54,7 @@ public class Tavunu {
         }
         
     }
-  
+    // Receive pava if amount is positive.
    public boolean receivePava(int amount){
 
         if(amount <= 0){
@@ -66,7 +66,7 @@ public class Tavunu {
         }
         
     }
-   
+   // Change name if name starts with T or D
    public boolean setName(String name){
         if(name.charAt(0) != 'T' && name.charAt(0) != 'D'){
             return false;
